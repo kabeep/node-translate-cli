@@ -1,0 +1,61 @@
+{
+    "name": "@kabeep/node-translate-cli",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "A powerful, secure and feature-rich tool via Google Translation in terminal.",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "bin": {
+        "translate": "bin/cli.ts"
+    },
+    "scripts": {
+        "docs": "jsdoc -c jsdoc.config.json",
+        "lint": "xo src/**/*.ts --fix",
+        "pretest": "npm run lint",
+        "test": "vitest run",
+        "coverage": "vitest run --coverage",
+        "watch": "tsup --watch",
+        "watch:test": "vitest",
+        "build": "tsup --dts --treeshake smallest",
+        "prepare": "husky"
+    },
+    "devDependencies": {
+        "@types/node": "^20.12.7",
+        "@vitest/coverage-istanbul": "^1.5.1",
+        "docdash": "^2.0.2",
+        "husky": "^9.0.11",
+        "jsdoc": "^4.0.2",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.0.2",
+        "typescript": "^5.4.5",
+        "vitest": "^1.5.1",
+        "xo": "^0.58.0"
+    },
+    "dependencies": {
+        "@kabeep/exception": "^1.2.3",
+        "@kabeep/node-translate": "^1.1.0",
+        "ora": "^8.0.1",
+        "yargs": "^17.7.2"
+    },
+    "author": "Zhang Zixin (kabeep)",
+    "homepage": "https://github.com/kabeep/node-translate-cli#readme",
+    "repository": "git@github.com:kabeep/node-translate-cli.git",
+    "bugs": "https://github.com/kabeep/node-translate-cli/issue",
+    "keywords": [
+        "nodejs",
+        "node cli",
+        "translate",
+        "translate cli",
+        "google translate",
+        "google translate cli",
+        "node translate",
+        "node translate cli"
+    ],
+    "engines": {
+        "node": ">=16"
+    },
+    "license": "MIT"
+}
