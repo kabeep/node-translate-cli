@@ -107,6 +107,12 @@ echo "test" | translate -f en -t zh
 translate "test" --from=en --to=zh
 ```
 
+#### Using language name and capitalized correction
+
+```shell
+translate "test" --from="ENGLISH" --to="chinese"
+```
+
 #### Adaptive source language
 
 ```shell

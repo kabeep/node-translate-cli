@@ -100,6 +100,12 @@ echo "test" | translate -f en -t zh
 translate "test" --from=en --to=zh
 ```
 
+#### 使用语言名称和大小写修正
+
+```shell
+translate "test" --from="ENGLISH" --to="chinese"
+```
+
 #### 自适应原文语言
 
 ```shell
