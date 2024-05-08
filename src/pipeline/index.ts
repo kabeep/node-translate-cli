@@ -1,5 +1,4 @@
 import ora from 'ora';
-
 import { boundary } from '../helpers/index.js';
 import { locale } from '../index.js';
 import type { ArgumentVector } from '../shared/index.js';
