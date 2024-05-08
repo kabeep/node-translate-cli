@@ -1,4 +1,5 @@
 import { osLocaleSync } from 'os-locale';
+
 import enUS from './en-US.js';
 import zhCN from './zh-CN.js';
 

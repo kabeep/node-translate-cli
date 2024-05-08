@@ -1,5 +1,3 @@
-import { Polysemy, Sentence, Synonym } from '../utils/index.js';
-
 export default {
     CMD_DSE_USAGE: '$0 <text> [options]',
     CMD_DES_FROM: 'The source language (language to be translated from) specified as language name or ISO 639-1 code',

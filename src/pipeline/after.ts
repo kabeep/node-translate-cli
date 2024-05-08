@@ -1,4 +1,5 @@
 import type { TranslationOption } from '@kabeep/node-translate';
+
 import type { ArgumentVector } from '../shared/index.js';
 import { getColumns, Polysemy, Sentence, Source, Synonym, Translation } from '../utils/index.js';
 

@@ -1,6 +1,7 @@
-import process from 'node:process';
 import { iso6391X } from '@kabeep/node-translate';
+import process from 'node:process';
 import ora from 'ora';
+
 import { locale } from '../index.js';
 import type { ArgumentVector } from '../shared/index.js';
 import { Adaptive, Code, Language } from '../utils/index.js';
