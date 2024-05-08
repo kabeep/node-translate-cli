@@ -24,6 +24,10 @@ English | [简体中文](README.zh-CN.md)
 ## 📖 Introduction
 
 > Using the [node-translate](https://github.com/kabeep/node-translate) API in the terminal.
+>
+> The API bypasses token restrictions.
+> If it is used in large quantities or for business, please support the work of
+> Google Translation, which provides a lot of free credits.
 
 #### Besides simple text translation, it also provides:
 

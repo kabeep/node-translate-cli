@@ -24,8 +24,10 @@
 ## 📖 简介
 
 > 在终端中使用 [node-translate](https://github.com/kabeep/node-translate) API。
+>
+> **Api 接口没有 token 限制，如果大量使用或用于商业，请支持 Google Translation 的工作，它提供了很多的免费额度。**
 
-除了简单的翻译文本，它还能够：
+#### 除了简单的翻译文本，它还能够：
 
 - 自适应翻译语言
 - 自动修正源文本
