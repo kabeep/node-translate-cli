@@ -6,6 +6,9 @@
         "node",
         "es2021"
     ],
+    "ignore": [
+        "src/locale/*"
+    ],
     "rules": {
         "unicorn/better-regex": "off",
         "unicorn/filename-case": "off",

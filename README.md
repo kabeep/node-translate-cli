@@ -17,9 +17,26 @@ English | [简体中文](README.zh-CN.md)
 
 ![Alt](https://repobeats.axiom.co/api/embed/f0b1b8b0150e5f891d765081ad1349cccc127c5c.svg "Repobeats analytics image")
 
+<img width="814" src="docs/images/feature.png" alt="logo">
+
 </div>
 
 ## 📖 Introduction
+
+> Using the [node-translate](https://github.com/kabeep/node-translate) API in the terminal.
+
+#### Besides simple text translation, it also provides:
+
+- Adaptive translation language
+- Automatic correction of the source text
+- Getting source text from stdin
+- Polysemous translation results
+- Synonyms of the source text
+- Example sentences of the source text
+- Phonetic transcription of the source and translated text
+- Stable output and error prompts
+- Beautiful terminal styling
+- Internationalized prompt for terminal
 
 ## ⚙️ Installation
 
@@ -37,11 +54,162 @@ pnpm add @kabeep/node-translate-cli
 
 ## 🚀 Usage
 
+```text
+translate <text> [options]
+
+options：
+  -f, --from            The source language (language to be translated from)
+                        specified as language name or ISO 639-1 code
+                                                           [string] [default: "auto"]
+  -t, --to              The target language (language to be translated to)
+                        specified as language name or ISO 639-1 code
+                                                           [string] [default: "auto"]
+      --timeout         Timeout duration for the translation request in
+                        milliseconds                       [number] [default: 30000]
+      --stdin-timeout   You can use this parameter to avoid timeouts if stdin
+                        takes too long (ms)                [number] [default: 5000]
+  -r, --retry           Retry attempts for the translation request in case of
+                        failure                            [number] [default: 0]
+  -p, --show-phonetics  Show the pronunciation of the translated word
+                                                           [boolean] [default: false]
+  -s, --show-source     Show source text information       [boolean] [default: false]
+  -d, --show-detail     Show translated detail information [boolean] [default: false]
+  -l, --show-list       Show supported language list       [boolean] [default: false]
+      --show-code       Show supported language code list  [boolean] [default: false]
+      --show-adaptive   Show adaptive language             [boolean] [default: false]
+  -v, --version         Show version                       [boolean]
+  -h, --help            Show help info                     [boolean]
+```
+
+<div align="center">
+
+<img width="814" src="docs/images/i18n.png" alt="logo">
+
+i18n
+
+</div>
+
 ## 🪄 Examples
+
+#### Using stdin
+
+```shell
+echo "test" | translate -f en -t zh
+```
+
+#### Using iso-639-1 and text parameters
+
+```shell
+translate "test" --from=en --to=zh
+```
+
+#### Adaptive source language
+
+```shell
+translate "test" -t zh
+```
+
+#### Self-detection of native language
+
+```shell
+translate "test" -f en
+```
+
+#### Autocorrect source text
+
+```shell
+translate "Thunk you"
+```
+
+#### Translate words and show synonyms, polysemy explanations and examples
+
+```shell
+translate "test" -d
+```
+
+#### Translate a word, phrase or sentence and show the source text and phonetic symbols
+
+```shell
+translate "test" -s -p
+```
+
+#### Set API timeout
+
+```shell
+translate "test" --timeout=60000
+```
+
+#### Set the timeout for the standard input stream
+
+```shell
+npm view node-translate-cli description | translate --stdin-timeout=30000
+```
+
+#### Set the number of retries when an API request fails
+
+```shell
+translate "test" -r 2
+```
+
+#### Show supported languages
+
+```shell
+translate -l
+```
+
+#### Show supported language codes
+
+```shell
+translate --show-code
+```
+
+#### Show supported adaptive languages
+
+```shell
+translate --show-adaptive
+```
+
+#### Show help information
+
+```shell
+translate -h
+```
+
+#### Show the version of current
+
+```shell
+translate -v
+```
+
+## 🔧 Autocorrect
+
+> `Default` white
+>
+> `Detect Language` yellow
+>
+> `Detect Spelling` red
+
+<div align="center">
+
+<img width="600" src="docs/images/autocorrect.png" alt="logo">
+
+</div>
+
+## 🐢 Network anomaly
+
+> When the network is abnormal, the terminal will change as shown in the figure below
+> (they actually come from the same line).
+
+<div align="center">
+
+<img width="600" src="docs/images/slowly-network.png" alt="logo">
+
+</div>
 
 ## 🔗 Related
 
-- [node-translate](https://github.com/kabeep/node-translate) - 🦜 A powerful, secure and feature-rich api via Google Translation.
+- [node-translate](https://github.com/kabeep/node-translate) - 🦜 A powerful, secure and feature-rich api via Google
+  Translation.
 - [google-translate-cli](https://github.com/jesusalber1/google-translate-cli) - Google Translate via CLI.
 
 ## 🤝 Contribution

@@ -3,13 +3,13 @@
     "version": "0.0.1",
     "type": "module",
     "description": "A powerful, secure and feature-rich tool via Google Translation in terminal.",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
+    "main": "./dist/cli.js",
+    "types": "./dist/cli.d.ts",
     "files": [
         "dist"
     ],
     "bin": {
-        "translate": "bin/cli.ts"
+        "translate": "./dist/cli.js"
     },
     "scripts": {
         "docs": "jsdoc -c jsdoc.config.json",
@@ -24,6 +24,7 @@
     },
     "devDependencies": {
         "@types/node": "^20.12.7",
+        "@types/yargs": "^17.0.32",
         "@vitest/coverage-istanbul": "^1.5.1",
         "docdash": "^2.0.2",
         "husky": "^9.0.11",
@@ -36,8 +37,9 @@
     },
     "dependencies": {
         "@kabeep/exception": "^1.2.3",
-        "@kabeep/node-translate": "^1.1.0",
+        "@kabeep/node-translate": "^1.1.1",
         "ora": "^8.0.1",
+        "os-locale": "^6.0.2",
         "yargs": "^17.7.2"
     },
     "author": "Zhang Zixin (kabeep)",
