@@ -206,6 +206,10 @@ translate -v
 
 </div>
 
+## ⌨️ Automatic line wrapping
+
+> When a single line of content is too long, the terminal will automatically wrap the line after the title.
+
 ## 🔗 Related
 
 - [node-translate](https://github.com/kabeep/node-translate) - 🦜 A powerful, secure and feature-rich api via Google
