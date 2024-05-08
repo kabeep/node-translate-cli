@@ -26,8 +26,12 @@ function after(
     showPhonetics && (translationText += ` /${result.to.text.phonetics}/`);
 
     const isOverflow = translationText.length > columns;
-    const translation = new Translation(isOverflow ? '' : translationText).toString();
-    console.log(`${translation}${isOverflow ? `\n > ${translationText}` : ''}`);
+    if (showPhonetics || showSource || showDetail) {
+        const translation = new Translation(isOverflow ? '' : translationText).toString();
+        console.log(`${translation}${isOverflow ? `\n > ${translationText}` : ''}`);
+    } else {
+        console.log(result.text);
+    }
 
     if (showDetail) {
         const synonymText = result.from.synonyms.join(', ');
