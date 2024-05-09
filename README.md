@@ -183,6 +183,32 @@ translate -h
 translate -v
 ```
 
+## 🧙🏽‍♂️ Advanced
+
+#### Using the static accessor `$()` method
+
+```shell
+git commit -m "$(translate 'feat: your commit content' -t zh)"
+```
+
+![Alt](docs/images/advanced-usage-alpha.png "Using the static accessor method")
+
+#### Using the pipe `|` symbol
+
+```shell
+npm info npm description | translate -t zh
+```
+
+![Alt](docs/images/advanced-usage-beta.png "Using the pipe | symbol")
+
+#### Using the redirection `>` symbol
+
+```shell
+translate "这是一段测试文本。" -t en > usage.txt
+```
+
+![Alt](docs/images/advanced-usage-gamma.png "Using the redirection > symbol")
+
 ## 🔧 Autocorrect
 
 > `Default` white

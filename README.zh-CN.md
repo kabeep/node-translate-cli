@@ -184,6 +184,32 @@ translate -h
 translate -v
 ```
 
+## 🧙🏽‍♂️ 进阶用法
+
+#### 使用静态访问器 `$()` 方法
+
+```shell
+git commit -m "$(translate 'feat: your commit content' -t zh)"
+```
+
+![Alt](docs/images/advanced-usage-alpha.png "Using the static accessor method")
+
+#### 使用管道 `|` 符号
+
+```shell
+npm info npm description | translate -t zh
+```
+
+![Alt](docs/images/advanced-usage-beta.png "Using the pipe | symbol")
+
+#### 使用重定向 `>` 符号
+
+```shell
+translate "这是一段测试文本。" -t en > usage.txt
+```
+
+![Alt](docs/images/advanced-usage-gamma.png "Using the redirection > symbol")
+
 ## 🔧 自动修正
 
 > `常规` 白色
