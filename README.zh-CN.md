@@ -192,25 +192,24 @@ translate -v
 >
 > `拼写错误` 红色
 
-<div align="center">
-
-<img width="600" src="docs/images/autocorrect.png" alt="logo">
-
-</div>
+![Alt](docs/images/autocorrect.png "Color Scheme")
 
 ## 🐢 网络异常
 
 > 网络异常时，终端会发生下图中的变化（它们实际来自同一行内容）。
 
-<div align="center">
-
-<img width="600" src="docs/images/slowly-network.png" alt="logo">
-
-</div>
+![Alt](docs/images/slowly-network.png "Stdout in Terminal")
 
 ## ⌨️ 自动换行
 
 > 当单行内容过长时，终端会在标题后自动换行。
+
+## 🌐 国际化
+
+欢迎通过 PR 在 [locale](https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts) 文件中贡献你的母语，
+或者通过 [Issues](https://github.com/kabeep/node-translate-cli/issues) 通知我处理。
+
+![Alt](docs/images/i18n.png "Locale from OS")
 
 ## 🔗 关联库
 

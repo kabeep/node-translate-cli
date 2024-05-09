@@ -85,14 +85,6 @@ options：
   -h, --help            Show help info                     [boolean]
 ```
 
-<div align="center">
-
-<img width="814" src="docs/images/i18n.png" alt="logo">
-
-i18n
-
-</div>
-
 ## 🪄 Examples
 
 #### Using stdin
@@ -199,26 +191,28 @@ translate -v
 >
 > `Detect Spelling` red
 
-<div align="center">
-
-<img width="600" src="docs/images/autocorrect.png" alt="logo">
-
-</div>
+![Alt](docs/images/autocorrect.png "Color Scheme")
 
 ## 🐢 Network anomaly
 
 > When the network is abnormal, the terminal will change as shown in the figure below
 > (they actually come from the same line).
 
-<div align="center">
-
-<img width="600" src="docs/images/slowly-network.png" alt="logo">
-
-</div>
+![Alt](docs/images/slowly-network.png "Stdout in Terminal")
 
 ## ⌨️ Automatic line wrapping
 
 > When a single line of content is too long, the terminal will automatically wrap the line after the title.
+
+![Alt](docs/images/newline.png "Overlong text")
+
+## 🌐 i18n
+
+Contribute your language via Pull Request
+in [locale](https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts) are welcome, or notify me
+via [Issues](https://github.com/kabeep/node-translate-cli/issues) for handling.
+
+![Alt](docs/images/i18n.png "Locale from OS")
 
 ## 🔗 Related
 
