@@ -1,8 +1,24 @@
 #!/usr/bin/env node
 import Exception from '@kabeep/exception';
+import readline from 'node:readline';
 import { hideBin } from 'yargs/helpers';
 import yargs from 'yargs/yargs';
 import pipeline, { type ArgumentVector, locale } from '../src/index.js';
+
+if (process.platform === 'win32') {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+    });
+
+    rl.on('SIGINT', function () {
+        process.emit('SIGINT');
+    });
+}
+
+process.on('SIGINT', function () {
+    process.exit(0);
+});
 
 pipeline(
     yargs(hideBin(process.argv))
