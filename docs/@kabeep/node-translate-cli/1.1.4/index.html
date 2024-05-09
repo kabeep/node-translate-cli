@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2>
+    
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+    <section class="package">
+        <h3>@kabeep/node-translate-cli 1.1.4</h3>		
+    </section>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <section class="readme usertext">
+        <article><div align="center">
+<img width="814" src="docs/images/logo.png" alt="logo">
+<p>A powerful, secure and feature-rich tool via Google Translation <strong>in terminal</strong>.</p>
+<hr>
+<p><a href="https://nodejs.org/docs/latest/api/"><img src="https://img.shields.io/node/v/%40kabeep%2Fnode-translate-cli?color=lightseagreen" alt="NodeJS"></a>
+<a href="LICENSE"><img src="https://img.shields.io/github/license/kabeep/node-translate-cli?color=slateblue" alt="License"></a>
+<a href="https://www.npmjs.com/package/@kabeep/node-translate-cli"><img src="https://img.shields.io/npm/d18m/%40kabeep%2Fnode-translate-cli?color=cornflowerblue" alt="NPM"></a>
+<a href="https://codecov.io/gh/kabeep/node-translate-cli"><img src="https://img.shields.io/codecov/c/github/kabeep/node-translate-cli?logo=codecov&amp;color=mediumvioletred" alt="Codecov"></a>
+<a href="https://app.codacy.com/gh/kabeep/node-translate-cli/dashboard?utm_source=gh&amp;utm_medium=referral&amp;utm_content=&amp;utm_campaign=Badge_grade"><img src="https://img.shields.io/codacy/grade/2cf61fce83694f82a0a9213ac8d9a796?logo=codacy&amp;logoColor=dodgerblue&amp;color=dodgerblue" alt="Codacy"></a>
+<a href="https://dl.circleci.com/status-badge/redirect/circleci/Qh23T2Zgw4Fy4V8uvKaymp/XWLHQrsMmQsM3jydfFa2AW/tree/master"><img src="https://dl.circleci.com/status-badge/img/circleci/Qh23T2Zgw4Fy4V8uvKaymp/XWLHQrsMmQsM3jydfFa2AW/tree/master.svg?style=shield" alt="CircleCI"></a></p>
+<p>English | <a href="README.zh-CN.md">简体中文</a></p>
+<p><img src="https://repobeats.axiom.co/api/embed/f0b1b8b0150e5f891d765081ad1349cccc127c5c.svg" alt="Alt" title="Repobeats analytics image"></p>
+<img width="814" src="docs/images/feature.png" alt="logo">
+</div>
+<h2>📖 Introduction</h2>
+<blockquote>
+<p>Using the <a href="https://github.com/kabeep/node-translate">node-translate</a> API in the terminal.</p>
+<p>The API bypasses token restrictions.
+If it is used in large quantities or for business, please support the work of
+Google Translation, which provides a lot of free credits.</p>
+</blockquote>
+<h4>Besides simple text translation, it also provides:</h4>
+<ul>
+<li>Adaptive translation language</li>
+<li>Automatic correction of the source text</li>
+<li>Getting source text from stdin</li>
+<li>Polysemous translation results</li>
+<li>Synonyms of the source text</li>
+<li>Example sentences of the source text</li>
+<li>Phonetic transcription of the source and translated text</li>
+<li>Stable output and error prompts</li>
+<li>Beautiful terminal styling</li>
+<li>Internationalized prompt for terminal</li>
+</ul>
+<h2>⚙️ Installation</h2>
+<pre class="prettyprint source lang-bash"><code>npm install @kabeep/node-translate-cli --save
+</code></pre>
+<pre class="prettyprint source lang-bash"><code>yarn add @kabeep/node-translate-cli
+</code></pre>
+<pre class="prettyprint source lang-bash"><code>pnpm add @kabeep/node-translate-cli
+</code></pre>
+<h2>🚀 Usage</h2>
+<pre class="prettyprint source lang-text"><code>translate &lt;text> [options]
+
+options：
+  -f, --from            The source language (language to be translated from)
+                        specified as language name or ISO 639-1 code
+                                                           [string] [default: &quot;auto&quot;]
+  -t, --to              The target language (language to be translated to)
+                        specified as language name or ISO 639-1 code
+                                                           [string] [default: &quot;auto&quot;]
+      --timeout         Timeout duration for the translation request in
+                        milliseconds                       [number] [default: 30000]
+      --stdin-timeout   You can use this parameter to avoid timeouts if stdin
+                        takes too long (ms)                [number] [default: 5000]
+  -r, --retry           Retry attempts for the translation request in case of
+                        failure                            [number] [default: 0]
+  -p, --show-phonetics  Show the pronunciation of the translated word
+                                                           [boolean] [default: false]
+  -s, --show-source     Show source text information       [boolean] [default: false]
+  -d, --show-detail     Show translated detail information [boolean] [default: false]
+  -l, --show-list       Show supported language list       [boolean] [default: false]
+      --show-code       Show supported language code list  [boolean] [default: false]
+      --show-adaptive   Show adaptive language             [boolean] [default: false]
+  -v, --version         Show version                       [boolean]
+  -h, --help            Show help info                     [boolean]
+</code></pre>
+<h2>🪄 Examples</h2>
+<h4>Using stdin</h4>
+<pre class="prettyprint source lang-shell"><code>echo &quot;test&quot; | translate -f en -t zh
+</code></pre>
+<h4>Using iso-639-1 and text parameters</h4>
+<pre class="prettyprint source lang-shell"><code>translate &quot;test&quot; --from=en --to=zh
+</code></pre>
+<h4>Using language name and capitalized correction</h4>
+<pre class="prettyprint source lang-shell"><code>translate &quot;test&quot; --from=&quot;ENGLISH&quot; --to=&quot;chinese&quot;
+</code></pre>
+<h4>Adaptive source language</h4>
+<pre class="prettyprint source lang-shell"><code>translate &quot;test&quot; -t zh
+</code></pre>
+<h4>Self-detection of native language</h4>
+<pre class="prettyprint source lang-shell"><code>translate &quot;test&quot; -f en
+</code></pre>
+<h4>Autocorrect source text</h4>
+<pre class="prettyprint source lang-shell"><code>translate &quot;Thunk you&quot;
+</code></pre>
+<h4>Translate words and show synonyms, polysemy explanations and examples</h4>
+<pre class="prettyprint source lang-shell"><code>translate &quot;test&quot; -d
+</code></pre>
+<h4>Translate a word, phrase or sentence and show the source text and phonetic symbols</h4>
+<pre class="prettyprint source lang-shell"><code>translate &quot;test&quot; -s -p
+</code></pre>
+<h4>Set API timeout</h4>
+<pre class="prettyprint source lang-shell"><code>translate &quot;test&quot; --timeout=60000
+</code></pre>
+<h4>Set the timeout for the standard input stream</h4>
+<pre class="prettyprint source lang-shell"><code>npm view node-translate-cli description | translate --stdin-timeout=30000
+</code></pre>
+<h4>Set the number of retries when an API request fails</h4>
+<pre class="prettyprint source lang-shell"><code>translate &quot;test&quot; -r 2
+</code></pre>
+<h4>Show supported languages</h4>
+<pre class="prettyprint source lang-shell"><code>translate -l
+</code></pre>
+<h4>Show supported language codes</h4>
+<pre class="prettyprint source lang-shell"><code>translate --show-code
+</code></pre>
+<h4>Show supported adaptive languages</h4>
+<pre class="prettyprint source lang-shell"><code>translate --show-adaptive
+</code></pre>
+<h4>Show help information</h4>
+<pre class="prettyprint source lang-shell"><code>translate -h
+</code></pre>
+<h4>Show the version of current</h4>
+<pre class="prettyprint source lang-shell"><code>translate -v
+</code></pre>
+<h2>🧙🏽‍♂️ Advanced</h2>
+<h4>Using the static accessor <code>$()</code> method</h4>
+<pre class="prettyprint source lang-shell"><code>git commit -m &quot;$(translate 'feat: your commit content' -t zh)&quot;
+</code></pre>
+<p><img src="docs/images/advanced-usage-alpha.png" alt="Alt" title="Using the static accessor method"></p>
+<h4>Using the pipe <code>|</code> symbol</h4>
+<pre class="prettyprint source lang-shell"><code>npm info npm description | translate -t zh
+</code></pre>
+<p><img src="docs/images/advanced-usage-beta.png" alt="Alt" title="Using the pipe | symbol"></p>
+<h4>Using the redirection <code>&gt;</code> symbol</h4>
+<pre class="prettyprint source lang-shell"><code>translate &quot;这是一段测试文本。&quot; -t en > usage.txt
+</code></pre>
+<p><img src="docs/images/advanced-usage-gamma.png" alt="Alt" title="Using the redirection &gt; symbol"></p>
+<h2>🔧 Autocorrect</h2>
+<blockquote>
+<p><code>Default</code> white</p>
+<p><code>Detect Language</code> yellow</p>
+<p><code>Detect Spelling</code> red</p>
+</blockquote>
+<p><img src="docs/images/autocorrect.png" alt="Alt" title="Color Scheme"></p>
+<h2>🐢 Network anomaly</h2>
+<blockquote>
+<p>When the network is abnormal, the terminal will change as shown in the figure below
+(they actually come from the same line).</p>
+</blockquote>
+<p><img src="docs/images/slowly-network.png" alt="Alt" title="Stdout in Terminal"></p>
+<h2>⌨️ Automatic line wrapping</h2>
+<blockquote>
+<p>When a single line of content is too long, the terminal will automatically wrap the line after the title.</p>
+</blockquote>
+<p><img src="docs/images/newline.png" alt="Alt" title="Overlong text"></p>
+<h2>🌐 i18n</h2>
+<p>Contribute your language via Pull Request
+in <a href="https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts">locale</a> are welcome, or notify me
+via <a href="https://github.com/kabeep/node-translate-cli/issues">Issues</a> for handling.</p>
+<p><img src="docs/images/i18n.png" alt="Alt" title="Locale from OS"></p>
+<h2>🔗 Related</h2>
+<ul>
+<li><a href="https://github.com/kabeep/node-translate">node-translate</a> - 🦜 A powerful, secure and feature-rich api via Google
+Translation.</li>
+<li><a href="https://github.com/jesusalber1/google-translate-cli">google-translate-cli</a> - Google Translate via CLI.</li>
+</ul>
+<h2>🤝 Contribution</h2>
+<p>Contributions via Pull Requests or <a href="https://github.com/kabeep/node-translate-cli/issues">Issues</a> are welcome.</p>
+<h2>📄 License</h2>
+<p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p></article>
+    </section>
+
+
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a> on Fri May 10 2024 01:34:11 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
