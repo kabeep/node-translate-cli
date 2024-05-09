@@ -2,24 +2,24 @@ import Exception from '@kabeep/exception';
 
 export class Info extends Exception {
     toString() {
-        return this.info('black.bgBlueBright');
+        return this.info('black.bgBlue');
     }
 }
 
 export class Success extends Exception {
     toString() {
-        return this.info('black.bgGreenBright');
+        return this.info('black.bgGreen');
     }
 }
 
 export class Warning extends Exception {
     toString() {
-        return this.info('black.bgYellowBright');
+        return this.info('black.bgYellow');
     }
 }
 
 export class Failure extends Exception {
     toString() {
-        return this.info('black.bgRedBright');
+        return this.info('black.bgRed');
     }
 }

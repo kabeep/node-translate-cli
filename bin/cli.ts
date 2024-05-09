@@ -97,7 +97,11 @@ pipeline(
             h: 'help',
         })
         .parse() as ArgumentVector,
-).catch((error: Exception) => {
-    console.log(`${error}`);
-    process.exit(1);
-});
+)
+    .then(() => {
+        process.exit(0);
+    })
+    .catch((error: Exception) => {
+        console.log(`${error}`);
+        process.exit(1);
+    });
