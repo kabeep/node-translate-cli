@@ -9,8 +9,8 @@ export class Translation extends Exception {
 }
 
 export class Source extends Exception {
-    toString(bgColor = 'White') {
-        this.name = locale.CMD_TYPO_SOURCE;
+    toString(code: string = locale.CMD_TYPO_SOURCE, bgColor = 'White') {
+        this.name = code;
         return this.info(`#15141b.bg${bgColor}`);
     }
 }

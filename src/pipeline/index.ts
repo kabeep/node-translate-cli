@@ -36,7 +36,7 @@ async function pipeline(argv: ArgumentVector) {
     }
 
     const { showPhonetics, showSource, showDetail } = argv;
-    after(result, { showPhonetics, showSource, showDetail });
+    after(result, { from, showPhonetics, showSource, showDetail });
 }
 
 export default pipeline;

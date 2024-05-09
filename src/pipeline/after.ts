@@ -1,12 +1,12 @@
 import type { TranslationOption } from '@kabeep/node-translate';
 import type { ArgumentVector } from '../shared/index.js';
-import { getColumns, Polysemy, Sentence, Source, Synonym, Translation } from '../utils/index.js';
+import { getColumns, getLanguageName, Polysemy, Sentence, Source, Synonym, Translation } from '../utils/index.js';
 
 function after(
     result: TranslationOption,
-    options: Pick<ArgumentVector, 'showPhonetics' | 'showSource' | 'showDetail'>,
+    options: Pick<ArgumentVector, 'from' | 'showPhonetics' | 'showSource' | 'showDetail'>,
 ) {
-    const { showPhonetics, showSource, showDetail } = options;
+    const { from, showPhonetics, showSource, showDetail } = options;
     const columns: number = Math.max(getColumns(), 32) - 32;
 
     if (showSource) {
@@ -18,7 +18,8 @@ function after(
         result.from.text.didYouMean && (sourceColor = 'Red');
 
         const isOverflow = sourceText.length > columns;
-        const source = new Source(isOverflow ? '' : sourceText).toString(sourceColor);
+        const sourceLanguage = getLanguageName(from, result.from.language.iso);
+        const source = new Source(isOverflow ? '' : sourceText).toString(sourceLanguage, sourceColor);
         console.log(`${source}\n${isOverflow ? ` > ${sourceText}` : ''}`);
     }
 
