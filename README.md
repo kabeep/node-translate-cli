@@ -185,6 +185,15 @@ translate -v
 
 ## 🧙🏽‍♂️ Advanced
 
+#### Using another npm package
+
+```shell
+npm install -g clipboard-cli
+
+# Use the clipboard-cli to copy translation results to the clipboard
+translate 'Translate this sentence to your clipboard' | clipboard
+```
+
 #### Using the static accessor `$()` method
 
 ```shell

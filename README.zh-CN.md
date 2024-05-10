@@ -186,6 +186,15 @@ translate -v
 
 ## 🧙🏽‍♂️ 进阶用法
 
+#### 使用其他 NPM 包
+
+```shell
+npm install -g clipboard-cli
+
+# Use the clipboard-cli to copy translation results to the clipboard
+translate 'Translate this sentence to your clipboard' | clipboard
+```
+
 #### 使用静态访问器 `$()` 方法
 
 ```shell
