@@ -17,7 +17,7 @@
 
 ![Alt](https://repobeats.axiom.co/api/embed/f0b1b8b0150e5f891d765081ad1349cccc127c5c.svg "Repobeats analytics image")
 
-<img width="814" src="docs/images/feature.png" alt="logo">
+<img width="814" src="docs/images/usage.png" alt="usage-png">
 
 </div>
 
@@ -241,7 +241,8 @@ translate "这是一段测试文本。" -t en > usage.txt
 
 ## 🌐 国际化
 
-欢迎通过 PR 在 [locale](https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts) 文件中贡献你的母语，
+欢迎通过 PR 和简易上手的 [node-translate-i18n](https://github.com/kabeep/node-translate-i18n)
+在 [locale](https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts) 文件中贡献你的母语，
 或者通过 [Issues](https://github.com/kabeep/node-translate-cli/issues) 通知我处理。
 
 ![Alt](docs/images/i18n.png "Locale from OS")
@@ -249,6 +250,7 @@ translate "这是一段测试文本。" -t en > usage.txt
 ## 🔗 关联库
 
 - [node-translate](https://github.com/kabeep/node-translate) - 🦜 一个强大、安全且功能丰富的 API，通过 Google 翻译。
+- [node-translate-i18n](https://github.com/kabeep/node-translate-i18n) - 🌏 通过翻译母语本地化文件自动生成其他语言本地化文件的终端工具。
 - [google-translate-cli](https://github.com/jesusalber1/google-translate-cli) - 通过 CLI 进行谷歌翻译。
 
 ## 🤝 贡献

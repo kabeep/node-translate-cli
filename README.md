@@ -17,7 +17,7 @@ English | [简体中文](README.zh-CN.md)
 
 ![Alt](https://repobeats.axiom.co/api/embed/f0b1b8b0150e5f891d765081ad1349cccc127c5c.svg "Repobeats analytics image")
 
-<img width="814" src="docs/images/feature.png" alt="logo">
+<img width="814" src="docs/images/usage.png" alt="usage-png">
 
 </div>
 
@@ -243,9 +243,10 @@ translate "这是一段测试文本。" -t en > usage.txt
 
 ## 🌐 i18n
 
-Contribute your language via Pull Request
-in [locale](https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts) are welcome, or notify me
-via [Issues](https://github.com/kabeep/node-translate-cli/issues) for handling.
+Quickly contribute your language via Pull Request
+in [locale](https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts) file
+with ease-to-use [node-translate-i18n](https://github.com/kabeep/node-translate-i18n) are welcome,
+or notify me via [Issues](https://github.com/kabeep/node-translate-cli/issues) for handling.
 
 ![Alt](docs/images/i18n.png "Locale from OS")
 
@@ -253,6 +254,8 @@ via [Issues](https://github.com/kabeep/node-translate-cli/issues) for handling.
 
 - [node-translate](https://github.com/kabeep/node-translate) - 🦜 A powerful, secure and feature-rich api via Google
   Translation.
+- [node-translate-i18n](https://github.com/kabeep/node-translate-i18n) - 🌏 A command-line interface tool for translating
+  localization files to other languages.
 - [google-translate-cli](https://github.com/jesusalber1/google-translate-cli) - Google Translate via CLI.
 
 ## 🤝 Contribution
