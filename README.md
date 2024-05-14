@@ -243,9 +243,8 @@ translate "这是一段测试文本。" -t en > usage.txt
 
 ## 🌐 i18n
 
-Quickly contribute your language via Pull Request
-in [locale](https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts) file
-with ease-to-use [node-translate-i18n](https://github.com/kabeep/node-translate-i18n) are welcome,
+Quickly contribute your language via ease-to-use [node-translate-i18n](https://github.com/kabeep/node-translate-i18n)
+in [locale](https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts) file are welcome,
 or notify me via [Issues](https://github.com/kabeep/node-translate-cli/issues) for handling.
 
 ![Alt](docs/images/i18n.png "Locale from OS")
