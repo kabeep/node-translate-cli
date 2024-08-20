@@ -24,7 +24,7 @@
         "prepare": "husky"
     },
     "devDependencies": {
-        "@types/node": "^20.12.7",
+        "@types/node": "^22.4.1",
         "@types/yargs": "^17.0.32",
         "@vitest/coverage-istanbul": "^1.5.1",
         "docdash": "^2.0.2",
