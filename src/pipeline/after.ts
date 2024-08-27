@@ -23,15 +23,15 @@ function after(
         console.log(`${source}\n${isOverflow ? ` > ${sourceText}` : ''}`);
     }
 
-    let translationText = result.text;
-    showPhonetics && (translationText += ` /${result.to.text.phonetics}/`);
+    let translationText = result.to.text.value;
+    showPhonetics && result.to.text.phonetics && (translationText += ` /${result.to.text.phonetics}/`);
 
     const isOverflow = translationText.length > columns;
     if (showPhonetics || showSource || showDetail) {
         const translation = new Translation(isOverflow ? '' : translationText).toString();
         console.log(`${translation}${isOverflow ? `\n > ${translationText}` : ''}`);
     } else {
-        console.log(result.text);
+        console.log(result.to.text.value);
     }
 
     if (showDetail) {
