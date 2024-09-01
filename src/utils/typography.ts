@@ -2,15 +2,15 @@ import Exception from '@kabeep/exception';
 import { locale } from '../index.js';
 
 export class Translation extends Exception {
-    toString() {
-        this.name = locale.CMD_TYPO_TRANSLATION;
+    toString(languageName?: string) {
+        this.name = languageName || locale.CMD_TYPO_TRANSLATION;
         return this.info('#15141b.bgGreen');
     }
 }
 
 export class Source extends Exception {
-    toString(code: string = locale.CMD_TYPO_SOURCE, bgColor = 'White') {
-        this.name = code;
+    toString(languageName?: string, bgColor = 'White') {
+        this.name = languageName || locale.CMD_TYPO_SOURCE;
         return this.info(`#15141b.bg${bgColor}`);
     }
 }

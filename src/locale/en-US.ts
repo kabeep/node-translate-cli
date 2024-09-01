@@ -15,7 +15,7 @@ export default {
     CMD_SPIN_STDIN: 'Loading stdin...',
     CMD_SPIN_TRANSLATE: 'Waiting translate API...',
 
-    CMD_TYPO_TRANSLATION: 'Translation',
+    CMD_TYPO_TRANSLATION: 'System Language',
     CMD_TYPO_SOURCE: 'Source Text',
     CMD_TYPO_SYNONYM: 'Synonym',
     CMD_TYPO_POLYSEMY: 'Polysemy',

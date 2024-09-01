@@ -14,6 +14,7 @@
         "unicorn/filename-case": "off",
         "unicorn/prefer-string-replace-all": "off",
         "@typescript-eslint/no-unused-expressions": "off",
+        "@typescript-eslint/prefer-nullish-coalescing": "off",
         "@typescript-eslint/consistent-type-definitions": [
             "error",
             "interface"

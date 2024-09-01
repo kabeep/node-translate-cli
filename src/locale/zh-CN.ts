@@ -15,7 +15,7 @@ export default {
     CMD_SPIN_STDIN: '加载标准输入流...',
     CMD_SPIN_TRANSLATE: '等待翻译API...',
 
-    CMD_TYPO_TRANSLATION: '译文',
+    CMD_TYPO_TRANSLATION: '系统语言',
     CMD_TYPO_SOURCE: '原文',
     CMD_TYPO_SYNONYM: '同近义词',
     CMD_TYPO_POLYSEMY: '多义词',

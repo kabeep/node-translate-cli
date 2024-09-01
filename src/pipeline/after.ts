@@ -1,12 +1,21 @@
 import type { TranslationOption } from '@kabeep/node-translate';
 import type { ArgumentVector } from '../shared/index.js';
-import { getColumns, getLanguageName, Polysemy, Sentence, Source, Synonym, Translation } from '../utils/index.js';
+import {
+    getColumns,
+    getLanguageName,
+    getNativeName,
+    Polysemy,
+    Sentence,
+    Source,
+    Synonym,
+    Translation,
+} from '../utils/index.js';
 
 function after(
     result: TranslationOption,
-    options: Pick<ArgumentVector, 'from' | 'showPhonetics' | 'showSource' | 'showDetail'>,
+    options: Pick<ArgumentVector, 'from' | 'to' | 'showPhonetics' | 'showSource' | 'showDetail'>,
 ) {
-    const { from, showPhonetics, showSource, showDetail } = options;
+    const { from, to, showPhonetics, showSource, showDetail } = options;
     const columns: number = Math.max(getColumns(), 32) - 32;
 
     if (showSource) {
@@ -14,11 +23,11 @@ function after(
         showPhonetics && result.from.text.phonetics && (sourceText += ` /${result.from.text.phonetics}/`);
 
         let sourceColor = 'White';
-        result.from.language.didYouMean && (sourceColor = 'Yellow');
-        result.from.text.didYouMean && (sourceColor = 'Red');
+        result.from.text.didYouMean && (sourceColor = 'Yellow');
+        result.from.language.didYouMean && (sourceColor = 'Red');
 
         const isOverflow = sourceText.length > columns;
-        const sourceLanguage = getLanguageName(from, result.from.language.iso);
+        const sourceLanguage = getLanguageName(result.from.language.iso || from);
         const source = new Source(isOverflow ? '' : sourceText).toString(sourceLanguage, sourceColor);
         console.log(`${source}\n${isOverflow ? ` > ${sourceText}` : ''}`);
     }
@@ -28,7 +37,8 @@ function after(
 
     const isOverflow = translationText.length > columns;
     if (showPhonetics || showSource || showDetail) {
-        const translation = new Translation(isOverflow ? '' : translationText).toString();
+        const sourceLanguage = getNativeName(to);
+        const translation = new Translation(isOverflow ? '' : translationText).toString(sourceLanguage);
         console.log(`${translation}${isOverflow ? `\n > ${translationText}` : ''}`);
     } else {
         console.log(result.to.text.value);
