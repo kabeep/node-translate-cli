@@ -201,7 +201,7 @@ translate 'Translate this sentence to your clipboard' | clipboard
 git commit -m "$(translate 'feat: your commit content' -t zh)"
 ```
 
-![Alt](docs/images/advanced-usage-alpha.png "Using the static accessor method")
+![Alt](docs/images/advanced-usage-accessor.png "Using the static accessor method")
 
 #### 使用管道 `|` 符号
 
@@ -209,7 +209,7 @@ git commit -m "$(translate 'feat: your commit content' -t zh)"
 npm info npm description | translate -t zh
 ```
 
-![Alt](docs/images/advanced-usage-beta.png "Using the pipe | symbol")
+![Alt](docs/images/advanced-usage-pipe.png "Using the pipe | symbol")
 
 #### 使用重定向 `>` 符号
 
@@ -217,7 +217,7 @@ npm info npm description | translate -t zh
 translate "这是一段测试文本。" -t en > usage.txt
 ```
 
-![Alt](docs/images/advanced-usage-gamma.png "Using the redirection > symbol")
+![Alt](docs/images/advanced-usage-redirection.png "Using the redirection > symbol")
 
 ## 🔧 自动修正
 
