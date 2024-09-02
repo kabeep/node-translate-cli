@@ -17,7 +17,7 @@ English | [简体中文](README.zh-CN.md)
 
 ![Alt](https://repobeats.axiom.co/api/embed/f0b1b8b0150e5f891d765081ad1349cccc127c5c.svg "Repobeats analytics image")
 
-<img width="814" src="docs/images/usage.png" alt="usage-png">
+<img width="814" src="docs/images/preview.png" alt="usage-png">
 
 </div>
 
@@ -31,8 +31,8 @@ English | [简体中文](README.zh-CN.md)
 
 #### Besides simple text translation, it also provides:
 
-- Adaptive translation language
-- Automatic correction of the source text
+- Auto-detect system language as target language
+- Spell autocorrect
 - Getting source text from stdin
 - Polysemous translation results
 - Synonyms of the source text
@@ -220,11 +220,11 @@ translate "这是一段测试文本。" -t en > usage.txt
 
 ## 🔧 Autocorrect
 
-> `Default` white
+> Default: white background
 >
-> `Detect Language` yellow
+> Correct Spelling: yellow background
 >
-> `Detect Spelling` red
+> Detect Language: red background
 
 ![Alt](docs/images/autocorrect.png "Color Scheme")
 
