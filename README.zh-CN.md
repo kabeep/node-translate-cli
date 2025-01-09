@@ -1,10 +1,8 @@
 <div align="center">
 
-<img width="814" src="docs/images/logo.png" alt="logo">
+<img width="630" src="docs/images/logo.png" alt="logo">
 
-一个强大、安全且功能丰富的**终端**工具，通过 Google 翻译。
-
----
+一个强大、安全且功能丰富的**命令行**工具，通过 Google 翻译。
 
 [![NodeJS](https://img.shields.io/node/v/%40kabeep%2Fnode-translate-cli?color=lightseagreen)](https://nodejs.org/docs/latest/api/)
 [![License](https://img.shields.io/github/license/kabeep/node-translate-cli?color=slateblue)](LICENSE)

@@ -1,10 +1,8 @@
 <div align="center">
 
-<img width="814" src="docs/images/logo.png" alt="logo">
+<img width="630" src="docs/images/logo.png" alt="logo">
 
-A powerful, secure and feature-rich tool via Google Translation **in terminal**.
-
----
+A powerful, secure and feature-rich **command line** via Google Translation.
 
 [![NodeJS](https://img.shields.io/node/v/%40kabeep%2Fnode-translate-cli?color=lightseagreen)](https://nodejs.org/docs/latest/api/)
 [![License](https://img.shields.io/github/license/kabeep/node-translate-cli?color=slateblue)](LICENSE)
