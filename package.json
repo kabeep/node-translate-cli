@@ -2,7 +2,7 @@
     "name": "@kabeep/node-translate-cli",
     "version": "1.2.0",
     "type": "module",
-    "description": "A powerful, secure and feature-rich tool via Google Translation in terminal.",
+    "description": "A powerful, secure and feature-rich command line via Google Translation.",
     "main": "./dist/cli.js",
     "types": "./dist/cli.d.ts",
     "files": [
