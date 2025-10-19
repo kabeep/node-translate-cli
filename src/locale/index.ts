@@ -1,12 +1,10 @@
-import { osLocaleSync } from 'os-locale';
+import { OS_LOCALE_ENV } from '../constants/index.js';
 
 import enUS from './en-US.js';
 import zhCN from './zh-CN.js';
 
 function getLocale() {
-    const locale = osLocaleSync().split('-')[0];
-
-    switch (locale) {
+    switch (OS_LOCALE_ENV) {
         case 'zh': {
             return zhCN;
         }

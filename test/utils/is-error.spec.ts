@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import isError from '../../src/utils/is-error';
+import isError from '../../src/utils/is-error.js';
 
 test('isError - should return true for an Error object', () => {
     const error = new Error('Test error');
