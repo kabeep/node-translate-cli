@@ -23,8 +23,5 @@
         "docs",
         "test",
         "coverage"
-    ],
-    "ts-node": {
-        "esm": true
-    }
+    ]
 }

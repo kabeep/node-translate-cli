@@ -12,7 +12,7 @@
         "translate": "./dist/cli.js"
     },
     "scripts": {
-        "dev": "ts-node bin/cli.ts",
+        "dev": "node --loader ts-node/esm bin/cli.ts",
         "docs": "jsdoc -c jsdoc.config.json",
         "lint": "xo src/**/*.ts --fix",
         "pretest": "npm run lint",
