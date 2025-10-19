@@ -1,6 +1,6 @@
 {
     "name": "@kabeep/node-translate-cli",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "type": "module",
     "description": "A powerful, secure and feature-rich command line via Google Translation.",
     "main": "./dist/cli.js",
