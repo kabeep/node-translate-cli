@@ -34,7 +34,7 @@
         "tsup": "^8.5.0",
         "typescript": "^5.4.5",
         "vitest": "^3.2.4",
-        "xo": "^0.58.0"
+        "xo": "^1.2.3"
     },
     "dependencies": {
         "@kabeep/exception": "^1.2.3",
