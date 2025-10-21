@@ -44,7 +44,7 @@
         "log-symbols": "^7.0.1",
         "ora": "^8.0.1",
         "os-locale": "^6.0.2",
-        "yargs": "^17.7.2"
+        "yargs": "^18.0.0"
     },
     "author": "Zhang Zixin (kabeep)",
     "homepage": "https://github.com/kabeep/node-translate-cli#readme",
