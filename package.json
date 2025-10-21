@@ -14,7 +14,6 @@
     "scripts": {
         "prepare": "husky install",
         "dev": "cross-env NODE_NO_WARNINGS=1 node --loader ts-node/esm bin/cli.ts",
-        "docs": "jsdoc -c jsdoc.config.json",
         "lint": "biome check src --write",
         "lint:staged": "biome check src --write --staged",
         "lint:changed": "biome check src --write --changed",
@@ -32,9 +31,7 @@
         "@types/yargs": "^17.0.32",
         "@vitest/coverage-istanbul": "^3.2.4",
         "cross-env": "^10.1.0",
-        "docdash": "^2.0.2",
         "husky": "^9.0.11",
-        "jsdoc": "^4.0.2",
         "lint-staged": "^16.2.5",
         "ts-node": "^10.9.2",
         "tsup": "^8.5.0",
