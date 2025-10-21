@@ -15,7 +15,10 @@ async function pipeline(argv: ArgumentVector) {
         throw text;
     }
 
-    const spinner = ora({ text: locale.CMD_SPIN_TRANSLATE, color: 'green' }).start();
+    const spinner = ora({
+        text: locale.CMD_SPIN_TRANSLATE,
+        color: 'green',
+    }).start();
 
     let timer: NodeJS.Timeout;
     timer = setTimeout(() => {

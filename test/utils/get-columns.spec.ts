@@ -9,7 +9,7 @@ test('getColumns - should return the number of columns', () => {
 });
 
 test('getColumns - should return 0 if stdout.columns is undefined', () => {
-    // @ts-ignore TS2322: Type undefined is not assignable to type number
+    // @ts-expect-error TS2322: Type undefined is not assignable to type number
     stdout.columns = undefined;
     const result = getColumns();
     expect(result).toBe(0);

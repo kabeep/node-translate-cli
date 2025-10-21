@@ -1,10 +1,15 @@
 export default {
     CMD_DSE_USAGE: '$0 <text> [options]',
-    CMD_DES_FROM: 'The source language (language to be translated from) specified as language name or ISO 639-1 code',
-    CMD_DES_TO: 'The target language (language to be translated to) specified as language name or ISO 639-1 code',
-    CMD_DES_TIMEOUT: 'Timeout duration for the translation request in milliseconds',
-    CMD_DES_STDIN_TIMEOUT: 'You can use this parameter to avoid timeouts if stdin takes too long (ms)',
-    CMD_DES_RETRY: 'Retry attempts for the translation request in case of failure',
+    CMD_DES_FROM:
+        'The source language (language to be translated from) specified as language name or ISO 639-1 code',
+    CMD_DES_TO:
+        'The target language (language to be translated to) specified as language name or ISO 639-1 code',
+    CMD_DES_TIMEOUT:
+        'Timeout duration for the translation request in milliseconds',
+    CMD_DES_STDIN_TIMEOUT:
+        'You can use this parameter to avoid timeouts if stdin takes too long (ms)',
+    CMD_DES_RETRY:
+        'Retry attempts for the translation request in case of failure',
     CMD_DES_SHOW_PHONETICS: 'Show the pronunciation of the translated word',
     CMD_DES_SHOW_SOURCE: 'Show source text information',
     CMD_DES_SHOW_DETAIL: 'Show translated detail information',
@@ -24,7 +29,8 @@ export default {
     CMD_TYPO_ADAPTIVE: 'Adaptive List',
     CMD_TYPO_CODE: 'Code List',
 
-    CMD_ERR_MISSING_ARGUMENT: 'Please enter the content that needs to be translated',
+    CMD_ERR_MISSING_ARGUMENT:
+        'Please enter the content that needs to be translated',
     CMD_ERR_STDIN_TIMEOUT: 'Stdin listening timeouts',
     CMD_ERR_TIMEOUT: 'The timeout limits was reached',
     CMD_ERR_CONNRESET: 'The connection was forcibly closed',

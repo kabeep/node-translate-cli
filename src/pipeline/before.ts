@@ -38,8 +38,12 @@ async function before({
 
             resolve(text);
         } else {
-            process.stdin.isTTY && reject(new Error(locale.CMD_ERR_MISSING_ARGUMENT));
-            const spinner = ora({ text: locale.CMD_SPIN_STDIN, color: 'magenta' }).start();
+            process.stdin.isTTY &&
+                reject(new Error(locale.CMD_ERR_MISSING_ARGUMENT));
+            const spinner = ora({
+                text: locale.CMD_SPIN_STDIN,
+                color: 'magenta',
+            }).start();
 
             let stdin = '';
 
@@ -48,12 +52,12 @@ async function before({
                 reject(new Error(locale.CMD_ERR_STDIN_TIMEOUT));
             }, stdinTimeout);
 
-            process.stdin.on('data', function (chunk: string) {
+            process.stdin.on('data', (chunk: string) => {
                 clearTimeout(timer);
                 stdin += chunk;
             });
 
-            process.stdin.on('end', function () {
+            process.stdin.on('end', () => {
                 const stdinText = stdin.trim();
                 spinner.stop();
                 if (stdinText) {
