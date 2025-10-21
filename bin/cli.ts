@@ -3,7 +3,7 @@ import Exception from '@kabeep/exception';
 import readline from 'node:readline';
 import { hideBin } from 'yargs/helpers';
 import yargs from 'yargs/yargs';
-import pipeline, { type ArgumentVector, locale } from '../src/index.js';
+import pipeline, { type ArgumentVector, locale } from '../src';
 
 if (process.platform === 'win32') {
     const rl = readline.createInterface({

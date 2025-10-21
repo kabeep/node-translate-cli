@@ -1,11 +1,11 @@
 import ora from 'ora';
-import { boundary } from '../helpers/index.js';
-import { locale } from '../index.js';
-import type { ArgumentVector } from '../shared/index.js';
-import { isError } from '../utils/index.js';
-import after from './after.js';
-import before from './before.js';
-import run from './run.js';
+import { boundary } from '../helpers';
+import locale from '../locale';
+import type { ArgumentVector } from '../shared';
+import { isError } from '../utils';
+import after from './after';
+import before from './before';
+import run from './run';
 
 async function pipeline(argv: ArgumentVector) {
     const text = await boundary(before)(argv);

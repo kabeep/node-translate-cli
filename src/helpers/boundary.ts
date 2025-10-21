@@ -1,4 +1,4 @@
-import { catcher, type Failure } from '../utils/index.js';
+import { catcher, type Failure } from '../utils/index';
 
 type BoundaryFunction<T extends unknown[], U> =
     | ((...arguments_: T) => U)

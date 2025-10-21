@@ -1,1 +1,1 @@
-export { default as boundary } from './boundary.js';
+export { default as boundary } from './boundary';

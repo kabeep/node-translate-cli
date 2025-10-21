@@ -1,5 +1,5 @@
 import Exception from '@kabeep/exception';
-import { locale } from '../index.js';
+import locale from '../locale';
 
 export class Translation extends Exception {
     toString(languageName?: string) {

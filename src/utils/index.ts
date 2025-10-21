@@ -1,9 +1,9 @@
-export { default as catcher } from './catcher.js';
-export { default as getColumns } from './get-columns.js';
-export { default as getLanguageName } from './get-language-name.js';
-export { default as getNativeName } from './get-native-name.js';
-export { default as isError } from './is-error.js';
-export { Failure, Info, Success, Warning } from './notify.js';
+export { default as catcher } from './catcher';
+export { default as getColumns } from './get-columns';
+export { default as getLanguageName } from './get-language-name';
+export { default as getNativeName } from './get-native-name';
+export { default as isError } from './is-error';
+export { Failure, Info, Success, Warning } from './notify';
 export {
     Adaptive,
     Code,
@@ -13,4 +13,4 @@ export {
     Source,
     Synonym,
     Translation,
-} from './typography.js';
+} from './typography';

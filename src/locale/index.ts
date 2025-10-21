@@ -1,7 +1,7 @@
-import { OS_LOCALE_ENV } from '../constants/index.js';
+import { OS_LOCALE_ENV } from '../constants';
 
-import enUS from './en-US.js';
-import zhCN from './zh-CN.js';
+import enUS from './en-US';
+import zhCN from './zh-CN';
 
 function getLocale() {
     switch (OS_LOCALE_ENV) {

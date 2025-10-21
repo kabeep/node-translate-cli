@@ -1,5 +1,5 @@
 import type { TranslationOption } from '@kabeep/node-translate';
-import type { ArgumentVector } from '../shared/index.js';
+import type { ArgumentVector } from '../shared';
 import {
     getColumns,
     getLanguageName,

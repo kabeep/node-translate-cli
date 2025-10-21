@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import getLanguageName from '../../src/utils/get-language-name.js';
+import getLanguageName from '../../src/utils/get-language-name';
 
 test('getLanguageName - should return undefined when both from and detectFrom are undefined', () => {
     const result = getLanguageName();

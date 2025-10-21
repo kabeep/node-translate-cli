@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
-        "target": "ES2020",
-        "module": "Node16",
-        "moduleResolution": "Node16",
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
         "outDir": "./dist",
         "rootDir": ".",
         "strict": true,
@@ -12,6 +12,11 @@
         "forceConsistentCasingInFileNames": true,
         "declaration": true,
         "experimentalDecorators": true
+    },
+    "ts-node": {
+        "experimentalSpecifierResolution": "node",
+        "esm": true,
+        "transpileOnly": true
     },
     "include": [
         "src/**/*",

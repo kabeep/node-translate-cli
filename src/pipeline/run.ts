@@ -1,5 +1,5 @@
 import translate, { type TranslateOptions } from '@kabeep/node-translate';
-import { locale } from '../index.js';
+import locale from '../locale';
 
 async function run(text: string, options: Omit<TranslateOptions, 'raw'>) {
     try {

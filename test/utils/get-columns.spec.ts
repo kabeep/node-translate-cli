@@ -1,6 +1,6 @@
 import { stdout } from 'node:process';
 import { expect, test } from 'vitest';
-import getColumns from '../../src/utils/get-columns.js';
+import getColumns from '../../src/utils/get-columns';
 
 test('getColumns - should return the number of columns', () => {
     stdout.columns = 80;
