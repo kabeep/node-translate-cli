@@ -1,0 +1,2 @@
+"src/**/*.ts":
+  - "biome check src test --write"
