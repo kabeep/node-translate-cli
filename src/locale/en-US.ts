@@ -13,9 +13,7 @@ export default {
     CMD_DES_SHOW_PHONETICS: 'Show the pronunciation of the translated word',
     CMD_DES_SHOW_SOURCE: 'Show source text information',
     CMD_DES_SHOW_DETAIL: 'Show translated detail information',
-    CMD_DES_SHOW_LIST: 'Show supported languages',
-    CMD_DES_SHOW_CODE: 'Show supported language codes',
-    CMD_DES_SHOW_ADAPTIVE: 'Show supported adaptive languages',
+    CMD_DES_SHOW_LANGUAGES: 'Show supported languages',
 
     CMD_SPIN_STDIN: 'Loading stdin...',
     CMD_SPIN_TRANSLATE: 'Waiting translate API...',
@@ -26,8 +24,6 @@ export default {
     CMD_TYPO_POLYSEMY: 'Polysemy',
     CMD_TYPO_SENTENCE: 'Sentence',
     CMD_TYPO_LANGUAGE: 'Language List',
-    CMD_TYPO_ADAPTIVE: 'Adaptive List',
-    CMD_TYPO_CODE: 'Code List',
 
     CMD_ERR_MISSING_ARGUMENT:
         'Please enter the content that needs to be translated',

@@ -41,6 +41,7 @@
     "dependencies": {
         "@kabeep/exception": "^1.2.3",
         "@kabeep/node-translate": "^1.1.6",
+        "get-east-asian-width": "^1.4.0",
         "log-symbols": "^7.0.1",
         "ora": "^8.0.1",
         "os-locale": "^6.0.2",

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import Exception from '@kabeep/exception';
+import type Exception from '@kabeep/exception';
+import process from 'node:process';
 import readline from 'node:readline';
 import { hideBin } from 'yargs/helpers';
 import yargs from 'yargs/yargs';
@@ -11,12 +12,12 @@ if (process.platform === 'win32') {
         output: process.stdout,
     });
 
-    rl.on('SIGINT', function () {
+    rl.on('SIGINT', () => {
         process.emit('SIGINT');
     });
 }
 
-process.on('SIGINT', function () {
+process.on('SIGINT', () => {
     process.exit(0);
 });
 
@@ -73,22 +74,10 @@ pipeline(
             boolean: true,
             default: false,
         })
-        .options('show-list', {
+        .options('show-languages', {
             alias: 'l',
             type: 'boolean',
-            desc: locale.CMD_DES_SHOW_LIST,
-            boolean: true,
-            default: false,
-        })
-        .options('show-code', {
-            type: 'boolean',
-            desc: locale.CMD_DES_SHOW_CODE,
-            boolean: true,
-            default: false,
-        })
-        .options('show-adaptive', {
-            type: 'boolean',
-            desc: locale.CMD_DES_SHOW_ADAPTIVE,
+            desc: locale.CMD_DES_SHOW_LANGUAGES,
             boolean: true,
             default: false,
         })

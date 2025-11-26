@@ -8,9 +8,7 @@ export default {
     CMD_DES_SHOW_PHONETICS: '查看翻译文本的单词发音',
     CMD_DES_SHOW_SOURCE: '查看源文本信息',
     CMD_DES_SHOW_DETAIL: '查看翻译后的详细信息',
-    CMD_DES_SHOW_LIST: '显示支持的语言列表',
-    CMD_DES_SHOW_CODE: '显示支持的语言代码列表',
-    CMD_DES_SHOW_ADAPTIVE: '显示支持的自适应语言',
+    CMD_DES_SHOW_LANGUAGES: '显示支持的语言列表',
 
     CMD_SPIN_STDIN: '加载标准输入流...',
     CMD_SPIN_TRANSLATE: '等待翻译API...',
@@ -21,8 +19,6 @@ export default {
     CMD_TYPO_POLYSEMY: '多义词',
     CMD_TYPO_SENTENCE: '例句',
     CMD_TYPO_LANGUAGE: '语言列表',
-    CMD_TYPO_ADAPTIVE: '自适应列表',
-    CMD_TYPO_CODE: '语言代码列表',
 
     CMD_ERR_MISSING_ARGUMENT: '请输入需要翻译的内容',
     CMD_ERR_STDIN_TIMEOUT: '标准输入流监听超时',

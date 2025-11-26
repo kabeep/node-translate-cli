@@ -8,8 +8,6 @@ export interface ArgumentVector {
     showPhonetics: boolean;
     showSource: boolean;
     showDetail: boolean;
-    showList: boolean;
-    showCode: boolean;
-    showAdaptive: boolean;
+    showLanguages: boolean;
     $0: string;
 }

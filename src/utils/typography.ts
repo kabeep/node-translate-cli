@@ -35,24 +35,3 @@ export class Sentence extends Exception {
         return this.info('#15141b.bgCyan');
     }
 }
-
-export class Language extends Exception {
-    toString() {
-        this.name = locale.CMD_TYPO_LANGUAGE;
-        return this.info('#15141b.bgMagenta');
-    }
-}
-
-export class Adaptive extends Exception {
-    toString() {
-        this.name = locale.CMD_TYPO_ADAPTIVE;
-        return this.info('#15141b.bgMagenta');
-    }
-}
-
-export class Code extends Exception {
-    toString() {
-        this.name = locale.CMD_TYPO_CODE;
-        return this.info('#15141b.bgMagenta');
-    }
-}
