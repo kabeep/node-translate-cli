@@ -4,6 +4,7 @@ export default {
         'The source language (language to be translated from) specified as language name or ISO 639-1 code',
     CMD_DES_TO:
         'The target language (language to be translated to) specified as language name or ISO 639-1 code',
+    CMD_DES_ENGINE: 'Select translation engine',
     CMD_DES_TIMEOUT:
         'Timeout duration for the translation request in milliseconds',
     CMD_DES_STDIN_TIMEOUT:

@@ -37,6 +37,14 @@ pipeline(
             desc: locale.CMD_DES_TO,
             default: 'auto',
         })
+        .options('engine', {
+            alias: 'e',
+            type: 'string',
+            choices: ['google', 'microsoft'],
+            desc: locale.CMD_DES_ENGINE,
+            default: () => process.env.NODE_TRANSLATE_CLI_ENGINE ?? 'google',
+            defaultDescription: '"google"',
+        })
         .options('timeout', {
             type: 'number',
             desc: locale.CMD_DES_TIMEOUT,
