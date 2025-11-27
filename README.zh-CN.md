@@ -24,6 +24,9 @@
 > 在终端中使用 [node-translate](https://github.com/kabeep/node-translate) API。
 >
 > **Api 接口没有 token 限制，如果大量使用或用于商业，请支持 Google Translation 的工作，它提供了很多的免费额度。**
+>
+> [2025-11-27] 我在 `v1.4.0` 版本加入了 `Microsoft` 翻译引擎，
+> 以应对谷歌翻译不向部分国家或地区的网络提供服务的问题，虽然没有丰富的输出，至少这些地区的用户可以用了，enjoy it ;)
 
 #### 除了简单的翻译文本，它还能够：
 

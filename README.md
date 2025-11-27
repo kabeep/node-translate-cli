@@ -26,6 +26,10 @@ English | [简体中文](README.zh-CN.md)
 > The API bypasses token restrictions.
 > If it is used in large quantities or for business, please support the work of
 > Google Translation, which provides a lot of free credits.
+>
+> [11/25/2025] I add the `Microsoft` translation engine in the `1.4.0` version to deal with the problem that Google
+> Translate does not provide services to the newtworks of some countries or regions.
+> Although there is no rich output, at least users in these regions can use it. Enjoy it ;)
 
 #### Besides simple text translation, it also provides:
 
