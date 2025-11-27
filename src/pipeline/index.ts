@@ -8,6 +8,17 @@ import before from './before';
 import run from './run';
 
 async function pipeline(argv: ArgumentVector) {
+    const {
+        from,
+        to,
+        engine,
+        timeout,
+        retry,
+        showPhonetics,
+        showSource,
+        showDetail,
+    } = argv;
+
     const text = await boundary(before)(argv);
     if (text === undefined) return;
 
@@ -27,9 +38,13 @@ async function pipeline(argv: ArgumentVector) {
             spinner.color = 'red';
         }, 10_000);
     }, 5000);
-
-    const { from, to, timeout, retry } = argv;
-    const result = await boundary(run)(text, { from, to, timeout, retry });
+    const result = await boundary(run)(text, {
+        from,
+        to,
+        engine,
+        timeout,
+        retry,
+    });
 
     clearTimeout(timer);
     spinner.stop();
@@ -38,8 +53,7 @@ async function pipeline(argv: ArgumentVector) {
         throw result;
     }
 
-    const { showPhonetics, showSource, showDetail } = argv;
-    after(result, { from, to, showPhonetics, showSource, showDetail });
+    after(result, { from, to, engine, showPhonetics, showSource, showDetail });
 }
 
 export default pipeline;

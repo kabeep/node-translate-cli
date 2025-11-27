@@ -1,9 +1,14 @@
-import translate, { type TranslateOptions } from '@kabeep/node-translate';
+import type { TranslateOptions } from '@kabeep/node-translate';
+import { translator } from '../helpers';
 import locale from '../locale';
+import type { ArgumentVector } from '../shared';
 
-async function run(text: string, options: Omit<TranslateOptions, 'raw'>) {
+async function run(
+    text: string,
+    options: Omit<TranslateOptions, 'raw'> & Pick<ArgumentVector, 'engine'>,
+) {
     try {
-        return await translate(text, options);
+        return await translator(text, options);
     } catch (error: unknown) {
         const { message } = error as Error;
         switch (message) {

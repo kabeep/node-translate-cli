@@ -1,9 +1,10 @@
 import type { TranslationOption } from '@kabeep/node-translate';
-import type { ArgumentVector } from '../shared';
+import type { ArgumentVector, MicrosoftTranslateOption } from '../shared';
 import {
     getColumns,
     getLanguageName,
     getNativeName,
+    gray,
     Polysemy,
     Sentence,
     Source,
@@ -12,15 +13,38 @@ import {
 } from '../utils/index.js';
 
 function after(
-    result: TranslationOption,
-    options: Pick<
+    result?: TranslationOption | MicrosoftTranslateOption[],
+    options?: Pick<
         ArgumentVector,
-        'from' | 'to' | 'showPhonetics' | 'showSource' | 'showDetail'
+        'from' | 'to' | 'showPhonetics' | 'showSource' | 'showDetail' | 'engine'
     >,
 ) {
-    const { from, to, showPhonetics, showSource, showDetail } = options;
+    const { from, to, showPhonetics, showSource, showDetail, engine } =
+        options || {};
     const columns: number = Math.max(getColumns(), 32) - 32;
 
+    if (!result) {
+        console.log('No response data');
+        return;
+    }
+
+    if (engine === 'microsoft') {
+        console.log(
+            (result as MicrosoftTranslateOption[])[0].translations[0].text,
+        );
+
+        if (showSource || showPhonetics || showDetail) {
+            console.log(
+                gray(
+                    '* `--engine microsoft` does not currently support the `--show-*` arguments',
+                ),
+            );
+        }
+
+        return;
+    }
+
+    result = result as TranslationOption;
     if (showSource) {
         let sourceText = result.from.text.value;
         if (showPhonetics && result.from.text.phonetics)
