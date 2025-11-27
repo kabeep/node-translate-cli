@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="630" src="docs/images/logo.png" alt="logo">
+<img width="630" src="assets/logo.png" alt="logo">
 
 A powerful, secure and feature-rich **command line** via Google Translation.
 
@@ -15,7 +15,7 @@ English | [简体中文](README.zh-CN.md)
 
 ![Alt](https://repobeats.axiom.co/api/embed/f0b1b8b0150e5f891d765081ad1349cccc127c5c.svg "Repobeats analytics image")
 
-<img width="814" src="docs/images/preview.png" alt="usage-png">
+<img width="814" src="assets/preview.png" alt="usage-png">
 
 </div>
 
@@ -65,6 +65,8 @@ options：
                                                            [string] [default: "auto"]
   -t, --to              The target language (language to be translated to)
                         specified as language name or ISO 639-1 code
+  -e, --engine          Select translation engine
+                        [string] [choices: "google", "microsoft"] [default: "google"]
                                                            [string] [default: "auto"]
       --timeout         Timeout duration for the translation request in
                         milliseconds                       [number] [default: 30000]
@@ -82,6 +84,12 @@ options：
   -v, --version         Show version                       [boolean]
   -h, --help            Show help info                     [boolean]
 ```
+
+### Environment Variables
+
+| Name                      | Description                                         |
+|:--------------------------|:----------------------------------------------------|
+| NODE_TRANSLATE_CLI_ENGINE | Specify the translation engine through env variable |
 
 ## 🪄 Examples
 
@@ -198,7 +206,7 @@ translate 'Translate this sentence to your clipboard' | clipboard
 git commit -m "$(translate 'feat: your commit content' -t zh)"
 ```
 
-![Alt](docs/images/advanced-usage-accessor.png "Using the static accessor method")
+![Alt](assets/advanced-usage-accessor.png "Using the static accessor method")
 
 #### Using the pipe `|` symbol
 
@@ -206,7 +214,7 @@ git commit -m "$(translate 'feat: your commit content' -t zh)"
 npm info npm description | translate -t zh
 ```
 
-![Alt](docs/images/advanced-usage-pipe.png "Using the pipe | symbol")
+![Alt](assets/advanced-usage-pipe.png "Using the pipe | symbol")
 
 #### Using the redirection `>` symbol
 
@@ -214,7 +222,15 @@ npm info npm description | translate -t zh
 translate "这是一段测试文本。" -t en > usage.txt
 ```
 
-![Alt](docs/images/advanced-usage-redirection.png "Using the redirection > symbol")
+![Alt](assets/advanced-usage-redirection.png "Using the redirection > symbol")
+
+#### Translate `The Rust-lang Book`  into your language
+
+```shell
+curl https://raw.githubusercontent.com/rust-lang/book/master/src/ch01-00-getting-started.md | translate
+```
+
+![Alt](assets/advanced-usage-curl.png "Translate \"The Rust-lang Book\" into your language")
 
 ## 🔧 Autocorrect
 
@@ -224,20 +240,20 @@ translate "这是一段测试文本。" -t en > usage.txt
 >
 > Detect Language: red background
 
-![Alt](docs/images/autocorrect.png "Color Scheme")
+![Alt](assets/autocorrect.png "Color Scheme")
 
 ## 🐢 Network anomaly
 
 > When the network is abnormal, the terminal will change as shown in the figure below
 > (they actually come from the same line).
 
-![Alt](docs/images/slowly-network.png "Stdout in Terminal")
+![Alt](assets/slowly-network.png "Stdout in Terminal")
 
 ## ⌨️ Automatic line wrapping
 
 > When a single line of content is too long, the terminal will automatically wrap the line after the title.
 
-![Alt](docs/images/newline.png "Overlong text")
+![Alt](assets/newline.png "Overlong text")
 
 ## 🌐 i18n
 
@@ -245,7 +261,7 @@ Quickly contribute your language via ease-to-use [node-translate-i18n](https://g
 in [locale](https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts) file are welcome,
 or notify me via [Issues](https://github.com/kabeep/node-translate-cli/issues) for handling.
 
-![Alt](docs/images/i18n.png "Locale from OS")
+![Alt](assets/i18n.png "Locale from OS")
 
 ## 🔗 Related
 

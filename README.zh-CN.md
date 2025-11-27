@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="630" src="docs/images/logo.png" alt="logo">
+<img width="630" src="assets/logo.png" alt="logo">
 
 一个强大、安全且功能丰富的**命令行**工具，通过 Google 翻译。
 
@@ -15,7 +15,7 @@
 
 ![Alt](https://repobeats.axiom.co/api/embed/f0b1b8b0150e5f891d765081ad1349cccc127c5c.svg "Repobeats analytics image")
 
-<img width="814" src="docs/images/preview.png" alt="usage-png">
+<img width="814" src="assets/preview.png" alt="usage-png">
 
 </div>
 
@@ -62,6 +62,7 @@ translate <text> [options]
                                                            [字符串] [默认值: "auto"]
   -t, --to              目标语言(要翻译的语言) 指定为语言名称或ISO 639-1代码
                                                            [字符串] [默认值: "auto"]
+  -e, --engine       [字符串] [可选值: "google", "microsoft"] [默认值: "google"]
       --timeout         翻译请求的超时持续时间（以毫秒为单位）    [数字] [默认值: 30000]
       --stdin-timeout   使用此参数来避免 stdin 超时 （以毫秒为单位）
                                                            [数字] [默认值: 5000]
@@ -76,13 +77,11 @@ translate <text> [options]
   -h, --help            显示帮助信息                         [布尔]
 ```
 
-<div align="center">
+### Environment Variables
 
-<img width="814" src="docs/images/i18n.png" alt="logo">
-
-i18n
-
-</div>
+| Name                      | Description  |
+|:--------------------------|:-------------|
+| NODE_TRANSLATE_CLI_ENGINE | 通过环境变量指定翻译引擎 |
 
 ## 🪄 例子
 
@@ -199,7 +198,7 @@ translate 'Translate this sentence to your clipboard' | clipboard
 git commit -m "$(translate 'feat: your commit content' -t zh)"
 ```
 
-![Alt](docs/images/advanced-usage-accessor.png "Using the static accessor method")
+![Alt](assets/advanced-usage-accessor.png "Using the static accessor method")
 
 #### 使用管道 `|` 符号
 
@@ -207,7 +206,7 @@ git commit -m "$(translate 'feat: your commit content' -t zh)"
 npm info npm description | translate -t zh
 ```
 
-![Alt](docs/images/advanced-usage-pipe.png "Using the pipe | symbol")
+![Alt](assets/advanced-usage-pipe.png "Using the pipe | symbol")
 
 #### 使用重定向 `>` 符号
 
@@ -215,7 +214,15 @@ npm info npm description | translate -t zh
 translate "这是一段测试文本。" -t en > usage.txt
 ```
 
-![Alt](docs/images/advanced-usage-redirection.png "Using the redirection > symbol")
+![Alt](assets/advanced-usage-redirection.png "Using the redirection > symbol")
+
+#### 将 `The Rust-lang Book` 的第一章节翻译成你的语言
+
+```shell
+curl https://raw.githubusercontent.com/rust-lang/book/master/src/ch01-00-getting-started.md | translate
+```
+
+![Alt](assets/advanced-usage-curl.png "Translate \"The Rust-lang Book\" into your language")
 
 ## 🔧 自动修正
 
@@ -225,13 +232,13 @@ translate "这是一段测试文本。" -t en > usage.txt
 >
 > 检测语言: 红色背景
 
-![Alt](docs/images/autocorrect.png "Color Scheme")
+![Alt](assets/autocorrect.png "Color Scheme")
 
 ## 🐢 网络异常
 
 > 网络异常时，终端会发生下图中的变化（它们实际来自同一行内容）。
 
-![Alt](docs/images/slowly-network.png "Stdout in Terminal")
+![Alt](assets/slowly-network.png "Stdout in Terminal")
 
 ## ⌨️ 自动换行
 
@@ -243,7 +250,7 @@ translate "这是一段测试文本。" -t en > usage.txt
 在 [locale](https://github.com/kabeep/node-translate-cli/tree/master/src/locale/index.ts) 文件中贡献你的母语，
 或者通过 [Issues](https://github.com/kabeep/node-translate-cli/issues) 通知我处理。
 
-![Alt](docs/images/i18n.png "Locale from OS")
+![Alt](assets/i18n.png "Locale from OS")
 
 ## 🔗 关联库
 
