@@ -16,6 +16,25 @@ export default {
     CMD_DES_SHOW_DETAIL: 'Show translated detail information',
     CMD_DES_SHOW_LANGUAGES: 'Show supported languages',
 
+    CMD_USAGE_EG: 'Translate "Hello World!" into your language',
+    CMD_USAGE_EG_TO: 'Translate "Hello World!" into Spanish',
+    CMD_USAGE_EG_SHOW:
+        'Output more information (Lang Name, Synonym, Polysemy, Sentence, ...)',
+    CMD_USAGE_EG_ABBR: 'Make CLI simple with argument abbreviations',
+    CMD_USAGE_EG_FILE: 'Translate file "./README.md" into your language',
+    CMD_USAGE_EG_STDIN:
+        'Translate "Rust-lang Book chapter 01" into your language',
+    CMD_USAGE_EG_HELP:
+        'Translate output of "npm --help" into your language, and save it to a file',
+    CMD_USAGE_EG_SLOW:
+        'If you have a time-consuming task, use `--stdin-timeout` to protect the CLI',
+    CMD_USAGE_EG_ENGINE: 'Use "microsoft" as translation engine',
+    CMD_USAGE_EG_ENV:
+        'Specify the translation engine through env variable "NODE_TRANSLATE_CLI_ENGINE"',
+    CMD_USAGE_EG_TIMEOUT:
+        'If you are concerned about your network status, use  `--timeout` to protect the CLI',
+    CMD_USAGE_EG_LANGS: 'Show supported languages list',
+
     CMD_SPIN_STDIN: 'Loading stdin...',
     CMD_SPIN_TRANSLATE: 'Waiting translate API...',
 
@@ -24,7 +43,6 @@ export default {
     CMD_TYPO_SYNONYM: 'Synonym',
     CMD_TYPO_POLYSEMY: 'Polysemy',
     CMD_TYPO_SENTENCE: 'Sentence',
-    CMD_TYPO_LANGUAGE: 'Language List',
 
     CMD_ERR_MISSING_ARGUMENT:
         'Please enter the content that needs to be translated',

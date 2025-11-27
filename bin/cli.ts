@@ -5,6 +5,7 @@ import readline from 'node:readline';
 import { hideBin } from 'yargs/helpers';
 import yargs from 'yargs/yargs';
 import pipeline, { type ArgumentVector, locale } from '../src';
+import { yellow } from '../src/utils';
 
 if (process.platform === 'win32') {
     const rl = readline.createInterface({
@@ -89,6 +90,30 @@ pipeline(
             boolean: true,
             default: false,
         })
+        .example([
+            [yellow('translate Hello World!'), locale.CMD_USAGE_EG],
+            [yellow('translate Hello World! --to=es'), locale.CMD_USAGE_EG_TO],
+            [yellow('translate --show-phonetics --show-source --show-detail Hello World!'), locale.CMD_USAGE_EG_SHOW],
+            [yellow('translate -psd Hello World!'), locale.CMD_USAGE_EG_ABBR],
+            [yellow('cat ./README.md | translate'), locale.CMD_USAGE_EG_FILE],
+            [
+                yellow(
+                    'curl https://raw.githubusercontent.com/rust-lang/book/master/src/ch01-00-getting-started.md | translate',
+                ),
+                locale.CMD_USAGE_EG_STDIN,
+            ],
+            [yellow('npm --help | translate > npm-help.txt'), locale.CMD_USAGE_EG_HELP],
+            [
+                yellow(
+                    'curl example.com --stdin-timeout=5000 | translate',
+                ),
+                locale.CMD_USAGE_EG_SLOW,
+            ],
+            [yellow('translate --engine microsoft Hello World!'), locale.CMD_USAGE_EG_ENGINE],
+            [yellow('export NODE_TRANSLATE_CLI_ENGINE=microsoft && translate Hello World!'), locale.CMD_USAGE_EG_ENV],
+            [yellow('translate --timeout 3000 --retry 3 Hello World!'), locale.CMD_USAGE_EG_TIMEOUT],
+            [yellow('translate --show-languages'), locale.CMD_USAGE_EG_LANGS],
+        ])
         .alias({
             v: 'version',
             h: 'help',
