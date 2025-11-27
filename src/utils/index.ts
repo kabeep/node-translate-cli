@@ -6,5 +6,5 @@ export { default as getNativeName } from './get-native-name';
 export { default as isError } from './is-error';
 export { Failure, Info, Success, Warning } from './notify';
 export { default as padContent } from './pad-content';
-export { magenta } from './palette';
+export { gray, magenta, yellow } from './palette';
 export { Polysemy, Sentence, Source, Synonym, Translation } from './typography';
