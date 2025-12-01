@@ -1,3 +1,5 @@
+import type { Draft } from 'immer';
+import { produce } from 'immer';
 import { shallowEqual } from '../utils';
 
 export type BaseState = object;
@@ -13,20 +15,17 @@ export type EffectCallback<TSlice> = (
     prevDeps: TSlice | undefined,
 ) => undefined | CleanupCallback;
 
-export type SetStatePartial<TState> =
-    | Partial<TState>
-    | ((state: TState) => Partial<TState>);
+export type StateRecipe<TState> = (
+    draft: Draft<TState>,
+    initialState: TState,
+) => TState | undefined;
+
+export type SetStateAction<TState> = Partial<TState> | StateRecipe<TState>;
 
 export interface StoreInstance<TState extends BaseState> {
     getState: () => TState;
-    setState: (partial: SetStatePartial<TState>) => void;
+    setState: (update: SetStateAction<TState>) => void;
     subscribe: (listener: StateListener<TState>) => CleanupCallback;
-    /**
-     * Register effects
-     * @param selector - Returns the data slice that Effect depends on
-     * @param callback - Callback executed when dependencies change
-     * @param options
-     */
     effect: <TSlice>(
         selector: StateSelector<TState, TSlice>,
         callback: EffectCallback<TSlice>,
@@ -43,18 +42,19 @@ function createStore<TState extends BaseState>(
 
     const getState = () => state;
 
-    const setState = (partial: SetStatePartial<TState>) => {
-        const partialState =
-            typeof partial === 'function' ? partial(state) : partial;
+    const setState = (update: SetStateAction<TState>) => {
+        let nextState: TState;
 
-        if (Object.is(partialState, state)) return;
+        if (typeof update === 'function')
+            nextState = produce(state, update as StateRecipe<TState>) as TState;
+        else nextState = { ...state, ...update };
+
+        if (Object.is(nextState, state)) return;
 
         const prevState = state;
-        state = { ...state, ...partialState };
+        state = nextState;
 
-        for (const listener of listeners) {
-            listener(state, prevState);
-        }
+        for (const listener of listeners) listener(state, prevState);
     };
 
     const subscribe = (listener: StateListener<TState>) => {
