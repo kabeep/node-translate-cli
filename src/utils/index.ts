@@ -7,4 +7,5 @@ export { default as isError } from './is-error';
 export { Failure, Info, Success, Warning } from './notify';
 export { default as padContent } from './pad-content';
 export { gray, magenta, yellow } from './palette';
+export { default as shallowEqual } from './shallow-equal';
 export { Polysemy, Sentence, Source, Synonym, Translation } from './typography';
