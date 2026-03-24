@@ -9,6 +9,9 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
+# pnpm Workspace
+pnpm-workspace.yaml
+
 # VisualStudioCode template
 .vscode/*
 !.vscode/settings.json
